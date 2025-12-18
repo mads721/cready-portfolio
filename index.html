@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Cready Software Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C2410C', // You can change this hex code if you want a different color
+            'accent-glow': '#C2410C80',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .page-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0a0a;
+      z-index: 9999;
+      pointer-events: none;
+    }
+    .workflow-step {
+      transition: all 0.3s ease;
+    }
+    .workflow-step:hover {
+      filter: drop-shadow(0 0 20px #C2410C80);
+    }
+    .workflow-step:hover .step-icon {
+      border-color: #C2410C;
+      color: #C2410C;
+    }
+    .workflow-step:hover .step-title {
+      color: #C2410C;
+    }
+    .workflow-line {
+      background: linear-gradient(90deg, #404040, #C2410C, #404040);
+      background-size: 200% 100%;
+      animation: shimmer 3s ease-in-out infinite;
+    }
+    @keyframes shimmer {
+      0%, 100% { background-position: 200% 0; }
+      50% { background-position: 0% 0; }
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-200 min-h-screen">
+  <div class="page-overlay" id="pageOverlay"></div>
+
+  <nav class="sticky top-0 z-50 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold tracking-tight">CREADY<span class="text-accent">.</span></a>
+      <div class="flex gap-8">
+        <a href="index.html" class="text-accent font-medium">Home</a>
+        <a href="about.html" class="hover:text-accent transition-colors">About</a>
+        <a href="services.html" class="hover:text-accent transition-colors">Services</a>
+        <a href="team.html" class="hover:text-accent transition-colors">Team</a>
+        <a href="contact.html" class="hover:text-accent transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="min-h-[70vh] flex flex-col justify-center px-6 py-20">
+    <div class="max-w-7xl mx-auto w-full">
+      <h1 class="text-6xl md:text-8xl font-bold tracking-tight leading-none mb-6 animate-item">
+        We Build<br>
+        <span class="text-accent">Reliable</span><br>
+        Digital Systems
+      </h1>
+      <p class="text-xl text-neutral-400 max-w-xl mb-10 animate-item">
+        Stop worrying about downtime and technical debt. We engineer robust, scalable software solutions designed to stabilize your operations and support business growth.
+      </p>
+    </div>
+  </section>
+
+  <section class="px-6 py-20">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-16 text-center animate-item">Our Development Workflow</h2>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+        
+        <div class="workflow-step flex flex-col items-center text-center animate-item cursor-pointer">
+          <div class="step-icon w-24 h-24 rounded-full border-2 border-neutral-700 flex items-center justify-center mb-4 transition-all">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <h3 class="step-title text-xl font-semibold transition-colors">Requirement Analysis</h3>
+          <p class="text-neutral-500 text-sm mt-2 max-w-[150px]">Identifying your exact business pain points</p>
+        </div>
+
+        <div class="hidden md:block workflow-line h-[2px] flex-1 max-w-[100px]"></div>
+
+        <div class="workflow-step flex flex-col items-center text-center animate-item cursor-pointer">
+          <div class="step-icon w-24 h-24 rounded-full border-2 border-neutral-700 flex items-center justify-center mb-4 transition-all">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="step-title text-xl font-semibold transition-colors">System Architecture</h3>
+          <p class="text-neutral-500 text-sm mt-2 max-w-[150px]">Designing stable & secure databases</p>
+        </div>
+
+        <div class="hidden md:block workflow-line h-[2px] flex-1 max-w-[100px]"></div>
+
+        <div class="workflow-step flex flex-col items-center text-center animate-item cursor-pointer">
+          <div class="step-icon w-24 h-24 rounded-full border-2 border-neutral-700 flex items-center justify-center mb-4 transition-all">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="step-title text-xl font-semibold transition-colors">Deployment</h3>
+          <p class="text-neutral-500 text-sm mt-2 max-w-[150px]">Testing & launching for 99.9% uptime</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-20">
+    <div class="max-w-7xl mx-auto text-center animate-item">
+        <h2 class="text-2xl font-semibold mb-6">Ready to stabilize your business?</h2>
+      <a href="contact.html" class="inline-block bg-accent hover:bg-orange-700 text-white font-semibold px-10 py-4 rounded-full transition-all hover:scale-105">
+        Start Your Project
+      </a>
+    </div>
+  </section>
+
+  <footer class="border-t border-neutral-800 px-6 py-8 mt-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-neutral-500 text-sm">© 2025 Cready Software Development. All rights reserved.</p>
+      <div class="flex gap-6 text-neutral-500 text-sm">
+        <a href="#" class="hover:text-accent transition-colors">Privacy</a>
+        <a href="#" class="hover:text-accent transition-colors">Terms</a>
+        <span class="text-neutral-700">|</span>
+        <span class="hover:text-accent transition-colors">mads.vipinosa@gmail.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Page Load Animation
+    gsap.to("#pageOverlay", {
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+      onComplete: () => {
+        document.getElementById("pageOverlay").style.display = "none";
+      }
+    });
+
+    // Scroll Animations
+    gsap.utils.toArray(".animate-item").forEach((item, i) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        delay: i * 0.1,
+        ease: "power3.out"
+      });
+    });
+  </script>
+</body>
+</html>

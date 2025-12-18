@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Cready Software Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C2410C', // Keeping your accent color
+            'accent-glow': '#C2410C80',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .page-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0a0a0a;
+      z-index: 9999;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-200 min-h-screen">
+  <div class="page-overlay" id="pageOverlay"></div>
+
+  <nav class="sticky top-0 z-50 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold tracking-tight">CREADY<span class="text-accent">.</span></a>
+      <div class="flex gap-8">
+        <a href="index.html" class="hover:text-accent transition-colors">Home</a>
+        <a href="about.html" class="text-accent font-medium">About</a>
+        <a href="services.html" class="hover:text-accent transition-colors">Services</a>
+        <a href="team.html" class="hover:text-accent transition-colors">Team</a>
+        <a href="contact.html" class="hover:text-accent transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="px-6 py-20">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 animate-item">About Us</h1>
+      <div class="w-24 h-1 bg-accent animate-item"></div>
+    </div>
+  </section>
+
+  <section class="px-6 py-16">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-bold mb-8 animate-item">Who We Are</h2>
+        <p class="text-xl text-neutral-400 leading-relaxed mb-6 animate-item">
+          We are a collective of developers, system architects, and problem solvers who believe that software should be boringly reliable.
+        </p>
+        <p class="text-xl text-neutral-400 leading-relaxed animate-item">
+          While others chase the latest hype, we focus on what matters: <strong>Stability</strong>. We strip away unnecessary complexity to build systems that work today, tomorrow, and five years from now.
+        </p>
+      </div>
+      <div class="animate-item">
+        <div class="aspect-[4/5] bg-neutral-900 rounded-lg border border-neutral-800 flex items-center justify-center overflow-hidden relative">
+             <div class="absolute inset-0 bg-neutral-800 opacity-50"></div>
+             <div class="z-10 text-center px-4">
+                <svg class="w-16 h-16 mx-auto mb-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                <p class="text-neutral-500 text-sm uppercase tracking-widest">Engineering First</p>
+             </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-6 py-16 bg-neutral-900/30">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+      
+      <div class="animate-item">
+        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+        <p class="text-lg text-neutral-400 leading-relaxed">
+          To engineer reliable, high-performance software systems that ensure operational stability and drive measurable improvement for the organizations we serve.
+        </p>
+        <p class="text-lg text-neutral-400 leading-relaxed mt-4">
+          We don't just write code; we build the digital foundation your organization can lean on.
+        </p>
+      </div>
+
+      <div class="animate-item">
+        <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
+        <p class="text-lg text-neutral-400 leading-relaxed">
+          To be the trusted technical partner for businesses, creating a future where technology is the most stable and powerful asset of every organization.
+        </p>
+        <p class="text-lg text-neutral-400 leading-relaxed mt-4">
+            A business landscape where organizations can focus on their goals, confident that their digital systems are fail-safe and efficient.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="px-6 py-20">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center animate-item">Why Partner With Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-8 border border-neutral-800 rounded-lg hover:border-accent/50 transition-colors animate-item">
+          <div class="mb-4 text-accent">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Uncompromising Stability</h3>
+          <p class="text-neutral-400">We prioritize system uptime and security above all else. We never ship code that "might" work; we build systems that endure.</p>
+        </div>
+
+        <div class="p-8 border border-neutral-800 rounded-lg hover:border-accent/50 transition-colors animate-item">
+          <div class="mb-4 text-accent">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Full Ownership</h3>
+          <p class="text-neutral-400">A system is only useful if you understand it. We provide complete documentation and training so you are never held hostage by your tech.</p>
+        </div>
+
+        <div class="p-8 border border-neutral-800 rounded-lg hover:border-accent/50 transition-colors animate-item">
+          <div class="mb-4 text-accent">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4">Root Cause Solutions</h3>
+          <p class="text-neutral-400">We don't apply quick patches to deep problems. We analyze your business needs to solve issues permanently at the source.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-neutral-800 px-6 py-8 mt-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-neutral-500 text-sm">© 2025 Cready Software Development. All rights reserved.</p>
+      <div class="flex gap-6 text-neutral-500 text-sm">
+        <a href="#" class="hover:text-accent transition-colors">Privacy</a>
+        <a href="#" class="hover:text-accent transition-colors">Terms</a>
+        <span class="text-neutral-700">|</span>
+        <span class="hover:text-accent transition-colors">mads.vipinosa@gmail.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to("#pageOverlay", {
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+      onComplete: () => {
+        document.getElementById("pageOverlay").style.display = "none";
+      }
+    });
+
+    gsap.utils.toArray(".animate-item").forEach((item, i) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 85%",
+          toggleActions: "play none none none"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        delay: i * 0.05,
+        ease: "power3.out"
+      });
+    });
+  </script>
+</body>
+</html>
